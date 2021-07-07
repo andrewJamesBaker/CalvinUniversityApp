@@ -9,7 +9,7 @@ import { globalStyles } from '../components/globalStyle'
  * @return {View} wrapper for screens to easily add backgrounds
  */
 
-  const background = {uri: 'https://images.pexels.com/photos/2853937/pexels-photo-2853937.jpeg?cs=srgb&dl=water-bubbles-2853937.jpg&fm=jpg'}
+  const background = {uri: 'https://www.thoughtco.com/thmb/VMD_dfFUSs13oGYzBlr2GRvYZyY=/3156x2105/filters:no_upscale():max_bytes(150000):strip_icc()/Calvin_College_1-53c3e236d6624d6d80e488bdf1c272ac.jpg'}
 
 
 export default function Card(props) {
