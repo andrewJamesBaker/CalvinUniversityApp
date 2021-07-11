@@ -21,7 +21,7 @@ export default function Bar(props) {
 
 const styles = StyleSheet.create({
     bar: {
-      backgroundColor: "#6699ff",
+      backgroundColor: "white",
       alignItems: 'stretch',
       opacity: 0.7,
       // marginVertical: 15,

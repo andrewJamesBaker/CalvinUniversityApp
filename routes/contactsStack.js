@@ -2,17 +2,17 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Header from '../components/header';
-import Hekman from '../screens/hekman';
+import Contacts from '../screens/contacts';
 
 const Stack = createStackNavigator();
-export default function HekmanStack( {navigation} ) {
+export default function HomeStack( {navigation} ) {
     return (
         <Stack.Navigator screenOptions={{
             headerStyle:{backgroundColor:'maroon'}
         }}>
             <Stack.Screen
-                name="Hekman Library"
-                component={Hekman}
+                name="Contacts"
+                component={Contacts}
                 options={{
                     headerLeft: () =>  <Header navigation={navigation} />
                 }}

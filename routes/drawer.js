@@ -8,7 +8,7 @@ import Header from '../components/header';
 
 import Home from '../routes/homeStack';
 import About from '../routes/aboutStack';
-// import Hekman from '../routes/hekmanStack'
+import Contacts from '../routes/contactsStack';
 import {WebView} from 'react-native-webview'
 
 const Stack = createStackNavigator();
@@ -16,6 +16,18 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const list = [
+    {
+        name: "Calendar",
+        site: "https://calvin.edu/calendar/"
+    },
+    {
+        name: "Map",
+        site: "https://calvin.edu/map/"
+    },
+    {
+        name: "Calvin Athletics",
+        site: "https://www.calvinknights.com/landing/index"
+    },
     {
         name: "Hekman Library",
         site: "https://library.calvin.edu/"
@@ -25,33 +37,21 @@ const list = [
         site: "https://calvin.edu/offices-services/dining-services/agenda.html"
     },
     {
-        name: "Map",
-        site: "https://calvin.edu/map/"
-    },
-    {
-        name: "Calendar",
-        site: "https://calvin.edu/calendar/"
-    },
-    {
         name: "Chimes",
         site: "https://calvinchimes.org/"
+    },
+    {
+        name: "Box Office",
+        site: "https://calvin.universitytickets.com/"
     },
     {
         name: "Web Links",
         site: "https://calvin.edu/students/"
     },
-    {
-        name: "Calvin Athletics",
-        site: "https://www.calvinknights.com/landing/index"
-    },
-    {
-        name: "Contacts",
-        site: "https://calvin.edu/about/contact/"
-    },
-    {
-        name: "Order a Sack Lunch",
-        site: ""
-    },
+    // {
+    //     name: "Order a Sack Lunch",
+    //     site: ""
+    // },
 ]
 
 
@@ -60,38 +60,26 @@ export default function App() {
         < Drawer.Navigator initialRouteName="Home" drawerStyle={{ backgroundColor: 'lightgrey' }} drawerContentOptions={{ activeTintColor: 'maroon' }}>
             
             <Drawer.Screen name="Home" component={Home} />
-            {/* <Drawer.Screen name="Hekman" component={HekmanStack} /> */}
-            <Drawer.Screen name="About" component={About} />
-            <Drawer.Screen name={list[0].name} component={Stacks} initialParams={list[0]} />
+            <Drawer.Screen name={list[0].name} component={Stacks} initialParams={list[0]}/>
             <Drawer.Screen name={list[1].name} component={Stacks} initialParams={list[1]}/>
             <Drawer.Screen name={list[2].name} component={Stacks} initialParams={list[2]}/>
             <Drawer.Screen name={list[3].name} component={Stacks} initialParams={list[3]}/>
             <Drawer.Screen name={list[4].name} component={Stacks} initialParams={list[4]}/>
+            <Drawer.Screen name={list[5].name} component={Stacks} initialParams={list[5]}/>
+            <Drawer.Screen name={list[6].name} component={Stacks} initialParams={list[6]}/>
+            <Drawer.Screen name={list[7].name} component={Stacks} initialParams={list[7]}/>
+            {/* <Drawer.Screen name={list[8].name} component={Stacks} initialParams={list[8]}/> */}
+            <Drawer.Screen name="Contacts" component={Contacts} />
+            <Drawer.Screen name="About" component={About} />
         </Drawer.Navigator >
 
     );
 };
 
-function HekmanStack( {navigation} ) {
-    return (
-        <Stack.Navigator screenOptions={{
-            headerStyle:{backgroundColor:'maroon'}
-        }}>
-            <Stack.Screen
-                name="Hekman Library"
-                component={Hekman}
-                options={{
-                    headerLeft: () =>  <Header navigation={navigation} />
-                }}
-            />
-        </Stack.Navigator>
-    );
-};
-
 function Stacks( {route, navigation} ) {
-    console.log(route.params)
+    // console.log(route.params)
     let site = route.params.site
-    console.log(site)
+    // console.log(site)
     return (
         <Stack.Navigator screenOptions={{
             headerStyle:{backgroundColor:'maroon'}
@@ -108,19 +96,9 @@ function Stacks( {route, navigation} ) {
     );
 };
 
-function Hekman() {
-    return (
-        <WebView
-        source={{ uri: 'https://library.calvin.edu/' }}
-      />
-    );
-}
 function Web({route}) {
-    console.log(route)
+    // console.log(route)
     return (
-        // <View>
-        // <Text>num</Text>
         <WebView source={{ uri: route.params.site}} />
-        // </View>
     );
 }
