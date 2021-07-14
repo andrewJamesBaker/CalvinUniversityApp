@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, FlatList, Linking } from 'react-native';
+import React, { useState} from 'react';
+import { Text, TouchableOpacity, FlatList, Linking } from 'react-native';
 import { globalStyles } from '../components/globalStyle';
 import Card from '../components/card';
 import Styler from '../components/styler'
-import Bar from '../components/bar'
 
 export default function Contacts({ navigation }) {
 

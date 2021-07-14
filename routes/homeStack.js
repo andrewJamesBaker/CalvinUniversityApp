@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Header from '../components/header';
 import Home from '../screens/home';
 
+// Creates the Home screen stack
 const Stack = createStackNavigator();
 export default function HomeStack( {navigation} ) {
     return (

@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, FlatList, Image } from 'react-native';
-import { globalStyles } from '../components/globalStyle';
-import Card from '../components/card';
+import React from 'react';
+import { View, Image } from 'react-native';
 import Bar from '../components/bar'
 import Styler from '../components/styler'
 
+const calvinLogo = { uri: 'https://calvin.edu/dotAsset/c223e958-2bec-4c04-8949-644591626f1c.png' }
+// CONSIDERED ALTERNATIVES BELLOW
 // const calvinLogo = { uri: 'https://s3-us-west-2.amazonaws.com/asset.plexuss.com/college/logos/Calvin_College.png' }
 // const calvinLogo = { uri: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Calvin_College_seal.svg/1200px-Calvin_College_seal.svg.png' }
-const calvinLogo = { uri: 'https://calvin.edu/dotAsset/c223e958-2bec-4c04-8949-644591626f1c.png' }
 // const calvinLogo = {uri: 'https://calvin.edu/dotAsset/afbb399e-bdf4-454a-9fe1-ca4a2476f7b3.png' }
 
 export default function Home({ navigation }) {
