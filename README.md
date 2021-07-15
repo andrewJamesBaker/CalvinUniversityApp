@@ -15,4 +15,4 @@
 * Home  
 * About  
 
-**Built with with react native and expo
+**Built with with react native and expo**
