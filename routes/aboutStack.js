@@ -1,19 +1,22 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Header from '../components/header';
 import About from '../screens/about';
 
 const Stack = createStackNavigator();
 
-export default function AboutStack( {navigation} ) {
+// Creates the about screen stack
+export default function AboutStack({ navigation }) {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{
+            headerStyle:{backgroundColor:'maroon'}
+        }}>
             <Stack.Screen
                 name="About"
                 component={About}
                 options={{
-                    headerLeft: () =>  <Header navigation={navigation} />
+                    headerLeft: () => <Header navigation={navigation} />
                 }}
             />
         </Stack.Navigator>

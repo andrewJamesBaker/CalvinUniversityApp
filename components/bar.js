@@ -23,8 +23,11 @@ const styles = StyleSheet.create({
     bar: {
       backgroundColor: "white",
       alignItems: 'stretch',
-      opacity: 0.7,
+      opacity: 0.75,
       // marginVertical: 15,
+      // shadowColor: 'black', 
+      // shadowOffset: {width: 1, height: 1},
+      // shadowRadius: 3
     },
     barContent: {
       marginHorizontal: 18,

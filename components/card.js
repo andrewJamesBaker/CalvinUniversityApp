@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     card: {
         borderRadius: 16,
         elevation: 3,
-        backgroundColor: '#6699ff',                 //#6699ff is a light blue color
+        backgroundColor: 'white',
         shadowOffset: {width: 1, height: 1},
         shadowColor: '#333',
         shadowOpacity: 0.3,
@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
         marginHorizontal: 4,
         marginVertical: 6,
         flex: 1,
-        opacity: 0.9                                //Optional
+        opacity: 0.75                                //Optional
     },
     circleCard: {
         borderRadius: 75,
-        backgroundColor: "#6699ff",                 //#6699ff is a light blue color
+        backgroundColor: "#6699ff",
         shadowOffset: {width: 1, height: 1},
         shadowColor: '#000',
         shadowOpacity: 0.3,

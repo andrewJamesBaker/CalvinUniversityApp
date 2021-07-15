@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Header from '../components/header';
 import Contacts from '../screens/contacts';
 
+// Creates the contact screen stack
 const Stack = createStackNavigator();
 export default function HomeStack( {navigation} ) {
     return (

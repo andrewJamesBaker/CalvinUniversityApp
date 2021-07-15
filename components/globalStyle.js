@@ -32,4 +32,10 @@ export const globalStyles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  linkText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: 'blue', 
+    textDecorationLine: 'underline'
+  },
 })

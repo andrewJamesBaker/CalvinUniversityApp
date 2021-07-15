@@ -1,11 +1,17 @@
 {
   "expo": {
-    "name": "CalvinUniversityApp",
-    "slug": "CalvinUniversityApp",
+    "name": "CalvinUniversity",
+    "slug": "CalvinUniversity",
     "version": "1.0.0",
+    "icon": "./assets/Calvin_College.png",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    }
   },
   "name": "CalvinUniversityApp",
   "androidNavigationBar": {
